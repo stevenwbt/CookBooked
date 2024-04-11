@@ -1,14 +1,14 @@
-const express = require('express');
-const cors = require('cors');
+import express from 'express';
+import cors from 'cors';
 
-import receiptsRouter from './routes/receipts.js';
+import receiptsRouter from '../routes/receipts.js';
 
 const port = 3000;
 const app = express();
 app.use(cors());
 
 /** GET endpoint for sending back a Hello World message */
-app.get('/hello', (req, res) => {
+app.get('/', (req, res) => {
   res.type('text');
   res.send('Hello, World!');
 });

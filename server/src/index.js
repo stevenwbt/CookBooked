@@ -1,4 +1,4 @@
-var fs = require('fs');
+import { promises as fs } from 'fs';
 var map = new Map();
 // Firebase or supabase for database in the future
 
