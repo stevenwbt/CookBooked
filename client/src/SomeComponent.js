@@ -1,21 +1,30 @@
-import { Text, StyleSheet } from "react-native"; // Here we are using the React Library
+import React from 'react';
+import { Text, StyleSheet, Button, View } from "react-native"; 
 
-// By using export, you can import and use this component in your app!
-export default SomeComponent = () => {
+const SomeComponent = ({ navigation }) => {
   let number = 100;
 
-  // This is what we want the component to return.
+  const handleButtonClick = () => {
+    console.log("Button clicked!");
+    navigation.navigate('Home');
+    // You can perform any action you want here
+  };
+
   return (
-    <Text style={styles.text}> {/* Here I am using the styles StyleSheet to change the text's color. */}
-      This is a component.
-      I can display data, {number}, using curly brackets!
-    </Text>
+    <View>
+      <Text style={styles.text}>
+        This is a component.
+        I can display data, {number}, using curly brackets!
+      </Text>
+      <Button onPress={handleButtonClick} title="Click me!" color="blue" />
+    </View>
   )
 }
 
-// You can style components and tags using StyleSheet
 const styles = StyleSheet.create({
   text: {
     color: 'red',
-  },
+  }
 });
+
+export default SomeComponent;
