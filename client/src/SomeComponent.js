@@ -6,7 +6,7 @@ const SomeComponent = ({ navigation }) => {
 
   const handleButtonClick = () => {
     console.log("Button clicked!");
-    navigation.navigate('Home');
+    navigation.navigate('HomePage');
     // You can perform any action you want here
   };
 

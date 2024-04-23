@@ -1,12 +1,20 @@
 import React from 'react';
-import { Text, StyleSheet, TouchableOpacity, View } from "react-native"; 
+import { Text, StyleSheet, Button, View } from "react-native"; 
 
-const SomeComponent = ({ navigation }) => {
+const HomePage = ({ navigation }) => {
+
+  const handleButtonClick = () => {
+    console.log("Button clicked!");
+    navigation.navigate('ReceiptPage');
+    // You can perform any action you want here
+  };
+
   return (
     <View>
       <Text style={styles.text}>
-        Home page.
+        HomePage.
       </Text>
+      <Button onPress={handleButtonClick} title="Click me!" color="blue" />
     </View>
   )
 }
@@ -17,4 +25,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default SomeComponent;
+export default HomePage;
