@@ -11,9 +11,7 @@ const HomePage = ({ navigation }) => {
 
   return (
     <View>
-      <Text style={styles.text}>
-        HomePage.
-      </Text>
+      <title>CookBooked</title>
       <Button onPress={handleButtonClick} title="Click me!" color="blue" />
     </View>
   )
