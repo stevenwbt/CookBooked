@@ -10,9 +10,10 @@ const ReceiptPage = ({ navigation }) => {
 
     return (
         <View>
-        <Text style={styles.text}>
-            ReceiptPage.
-        </Text>
+        <Image
+        source={require('./Dubs_Story_Image.jpg')}
+        style={styles.image}
+        />
         <Button onPress={handleButtonClick} title="Click me!" color="blue" />
         </View>
     )
@@ -21,7 +22,12 @@ const ReceiptPage = ({ navigation }) => {
 const styles = StyleSheet.create({
   text: {
     color: 'black',
+  },
+  image: {
+    width: 200,
+    height: 200,
   }
+
 });
 
 export default ReceiptPage;
