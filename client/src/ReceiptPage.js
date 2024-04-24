@@ -1,5 +1,6 @@
 import React from 'react';
-import { Text, StyleSheet, Button, View } from "react-native"; 
+import { Text, StyleSheet, Button, View, Image } from "react-native"; 
+
 
 const ReceiptPage = ({ navigation }) => {
     const handleButtonClick = () => {
@@ -10,11 +11,11 @@ const ReceiptPage = ({ navigation }) => {
 
     return (
         <View>
-        <Image
-        source={require('./Dubs_Story_Image.jpg')}
-        style={styles.image}
-        />
-        <Button onPress={handleButtonClick} title="Click me!" color="blue" />
+          <Image
+            source={require('../assets/Dubs_Story_Image.jpg')}
+            style={styles.image}
+          />
+          <Button onPress={handleButtonClick} title="Click me!" color="blue" />
         </View>
     )
 }
