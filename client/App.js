@@ -3,9 +3,9 @@ import { StyleSheet, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import SomeComponent from './src/SomeComponent';
-import HomePage from './src/HomePage';
-import ReceiptPage from './src/ReceiptPage';
-import VirtualPage from './src/VirtualPantry';
+import HomePage from './src/HomePage/HomePage';
+import ReceiptPage from './src/ReceiptPage/ReceiptPage';
+import VirtualPage from './src/VirtualPantry/VirtualPantry';
 
 const Stack = createNativeStackNavigator();
 

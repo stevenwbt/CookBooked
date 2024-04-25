@@ -6,7 +6,7 @@ const VirtualPantry = ({ navigation }) => {
     return (
     <View>
         <Text style={styles.text}>
-        VirtualPantry.
+          VirtualPantry.
         </Text>
     </View>
     )

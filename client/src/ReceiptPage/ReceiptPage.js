@@ -11,8 +11,19 @@ const ReceiptPage = ({ navigation }) => {
 
     return (
         <View>
+          <View>
+            <Text>Receipts</Text>
+          </View>
+          <View
+            style={{
+              borderBottomColor: 'black',
+              borderBottomWidth: StyleSheet.hairlineWidth,
+              borderWidth: 1,
+              margin: 10
+            }}
+          />
           <Image
-            source={require('../assets/Dubs_Story_Image.jpg')}
+            source={require('../../assets/Dubs_Story_Image.jpg')}
             style={styles.image}
           />
           <Button onPress={handleButtonClick} title="Click me!" color="blue" />
