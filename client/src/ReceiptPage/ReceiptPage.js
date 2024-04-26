@@ -1,5 +1,8 @@
 import React from 'react';
 import { Text, StyleSheet, Button, View, Image } from "react-native"; 
+import ReceiptCard from '../Common/Cards/Receipt/ReceiptCard';
+// import { useRouter } from 'expo-router'
+import styles from './ReceiptPage.style'
 
 
 const ReceiptPage = ({ navigation }) => {
@@ -11,17 +14,32 @@ const ReceiptPage = ({ navigation }) => {
 
     return (
         <View>
-          <View>
-            <Text>Receipts</Text>
+          <View style={styles.header}>
+            <Text style={styles.headerTitle}>Receipts</Text>
           </View>
           <View
             style={{
-              borderBottomColor: 'black',
+              borderColor: '#F2555A',
               borderBottomWidth: StyleSheet.hairlineWidth,
               borderWidth: 1,
               margin: 10
             }}
           />
+
+          <View style={styles.container}>
+            <ReceiptCard
+                storeName={"Safeway"}
+                date={"11 Jan 2023, 4:57 am"}
+                numItems={4}
+                // handleNavigate={() => router.push(``)}
+            /> 
+            <ReceiptCard
+                storeName={"Safeway"}
+                date={"11 Jan 2023, 4:57 am"}
+                numItems={4}
+                // handleNavigate={() => router.push(``)}
+            /> 
+          </View>
           <Image
             source={require('../../assets/Dubs_Story_Image.jpg')}
             style={styles.image}
@@ -31,15 +49,15 @@ const ReceiptPage = ({ navigation }) => {
     )
 }
 
-const styles = StyleSheet.create({
-  text: {
-    color: 'black',
-  },
-  image: {
-    width: 200,
-    height: 200,
-  }
+// const styles = StyleSheet.create({
+//   text: {
+//     color: 'black',
+//   },
+//   image: {
+//     width: 200,
+//     height: 200,
+//   }
 
-});
+// });
 
 export default ReceiptPage;
