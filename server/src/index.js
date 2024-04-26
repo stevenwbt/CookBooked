@@ -2,6 +2,8 @@ import { promises as fs } from 'fs';
 var map = new Map();
 // Firebase or supabase for database in the future
 
+
+//to test use this urL: http://localhost:3000/receipts?receipt=receipt.json
 async function getReceipt() {
     let uri = document.getElementById("receipt_input").value;
     try {
@@ -17,11 +19,14 @@ async function getReceipt() {
     }
 }
 
+// display the receipt in the front end
 function displayText(receipt){
     document.getElementById("receipt_result").innerHTML = receipt;
 }
 
+// get the text for our json specifically (kinda useless)
 function getText(uri) {
+    console.log(uri);
     fs.readFile('server/data/reciept.json', 'utf-8', function (err, data) {
         if (err) throw err;
     
@@ -45,6 +50,8 @@ function getText(uri) {
     });
 }
 
+// below are all useless since using a map, moving to json file for database
+
 // this is the main function to run a parse of a json
 function runParse(obj, notIncluded, itemsCount) {
     for (let i = 0; i < itemsCount; i++) {
@@ -59,6 +66,7 @@ function runParse(obj, notIncluded, itemsCount) {
     }
 }
 
+//remove an item from pantry + quantity
 function removeFromPantry(item, amount) {
     if (map.has(item)) {
         map.set(item, map.get(item) - amount <= 0? 0 : map.get(item) - amount);
@@ -67,6 +75,8 @@ function removeFromPantry(item, amount) {
     }
 }
 
+
+// add an item to pantry + quantity
 function addToPantry(item, amount) {
     if (map.has(item)) {
         map.set(item, map.get(item) + amount);
@@ -75,6 +85,7 @@ function addToPantry(item, amount) {
     }
 }
 
+// print pantry contents
 function showPantry() {
     console.log(map);
 }

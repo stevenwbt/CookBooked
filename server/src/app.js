@@ -10,14 +10,17 @@ app.use(cors());
 /** GET endpoint for sending back a Hello World message */
 app.get('/', (req, res) => {
   res.type('text');
-  res.send('Hello, World!');
+  res.send('Hello, World! This is the home page');
 });
 
-app.get('/hello', (req, res) => {
-  res.type('text');
-  res.send('Hello, World!');
-});
+// middleware 
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
 
+// routers
 app.use('/receipts', receiptsRouter);
 
 // Tells our app to listen to the given port

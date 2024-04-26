@@ -1,11 +1,11 @@
 import React from 'react';
 import { Text, StyleSheet, TouchableOpacity, View } from "react-native"; 
 
-const SomeComponent = ({ navigation }) => {
+const Pantry = ({ navigation }) => {
   return (
     <View>
       <Text style={styles.text}>
-        Home page.
+        Pantry page.
       </Text>
     </View>
   )
@@ -17,4 +17,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default SomeComponent;
+export default Pantry;
