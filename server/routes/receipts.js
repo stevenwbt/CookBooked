@@ -18,6 +18,8 @@ router.get('/', async (req, res) => {
             "BALANCE"
         ]
 
+        const itemCounts = {};
+
 
         res.send(data.toString());
     } catch (err) {

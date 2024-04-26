@@ -1,7 +1,16 @@
 import express from 'express';
 import cors from 'cors';
+import path from 'path';
+import cookieParser from 'cookie-parser';
+import logger from 'morgan';
+
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 
 import receiptsRouter from '../routes/receipts.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const port = 3000;
 const app = express();
